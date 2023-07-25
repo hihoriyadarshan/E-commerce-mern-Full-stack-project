@@ -10,9 +10,6 @@ mongoose.connect(mongoURI, {
 })
   .then(() => {
     console.log('Mongodb connected with server: ${data.connection.host}');
-  })
-  .catch((error) => {
-    console.error('Error connecting to MongoDB:', error);
   });
-}
+};
 module.exports = connectDatabase
