@@ -28,8 +28,16 @@ class ApiFeatures{
 
     removeFiels.forEach(key=> delete querycopy[key]);
 
-    // console.log(querycopy);
-     this.query = this.query.find(querycopy)
+        // Filter for Price Rating(Range)
+    
+    console.log(querycopy)
+    let querystr = JSON.stringify(querycopy);
+    querystr = querystr.replace(/\b(gt|gte|lt|lte)\b/g, key => `$${key}`); //This is a regular expression
+
+
+
+     this.query = this.query.find(JSON.parse(querystr));
+     console.log(querystr);
      return this;
     }
 }
