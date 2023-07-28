@@ -29,13 +29,14 @@ exports.createProduct = catchAsyncErrors(async(req,res,next)=>{
 // });
 
 
-// Make sure to provide the correct path to apifeatures.js
-
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
   // search filter
+  const resultperpage=5; //pagination
   const apiFeatures = new ApiFeatures(Product.find(), req.query)
+
   .search()
-  .filter();
+  .filter()
+  .pagination(resultperpage);
   const products = await apiFeatures.search().query; 
   res.status(200).json({
     success: true,
