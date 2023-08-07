@@ -13,10 +13,9 @@ router.route("/product/new").post(isAuthenticatedUser,authorizeRoles("admin"),cr
 // update product --admin and delte product
 router.route("/product/:id")
 .put(isAuthenticatedUser,authorizeRoles("admin"),updateProduct)
-.delete(isAuthenticatedUser,authorizeRoles("admin"),deleteProduct)
-.get(getProductsDetails);
+.delete(isAuthenticatedUser,authorizeRoles("admin"),deleteProduct);
+
+router.route("/product/:id").get(getProductsDetails);
 
 
-
-
-module.exports = router
+module.exports = router;
