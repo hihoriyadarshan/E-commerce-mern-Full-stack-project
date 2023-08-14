@@ -8,6 +8,8 @@ mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
+
+  
   .then(() => {
     console.log('Mongodb connected with server: ${data.connection.host}');
   });
