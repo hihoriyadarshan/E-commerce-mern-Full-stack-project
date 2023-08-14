@@ -1,0 +1,42 @@
+/* Header.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    margin-left: 40px;
+    width: 150px;
+    height: auto;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #eb4034;
+  }
+  
+  .profile-icon {
+    margin-left: 1.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .profile-icon:hover {
+    color: #eb4034;
+  }
+  
