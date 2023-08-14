@@ -7,7 +7,7 @@ import Product from "./Product.js"
 const product = {
     name:"Blue Tshirt",
     images:[{url: "https://i.ibb.co/DRST11n/1.webp"}],
-    price: "3000",
+    price: "₹3000",
     _id: "Darshan",
 
 
@@ -31,6 +31,14 @@ const Home = () => {
 
      <div className="container" id="container">
      <Product product={product} />
+     <Product product={product} />
+     <Product product={product} />
+     <Product product={product} />
+     <Product product={product} />
+     <Product product={product} />
+     <Product product={product} />
+     <Product product={product} />
+
      </div>
 
     </Fragment>

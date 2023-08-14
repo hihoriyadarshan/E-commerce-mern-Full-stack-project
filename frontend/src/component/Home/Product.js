@@ -4,7 +4,12 @@ import ReactStars from "react-rating-stars-component"
 
 const Options ={
     edit:false,
-}
+    color: "rgba(20,20,20,0.1)",
+    size: window.innerWidth < 600? 20 : 25,
+    activecolor : "tomato",
+    value: 2.5,
+    isHalf: true,
+};
 
 const Product = ({ product }) =>{
   return (
