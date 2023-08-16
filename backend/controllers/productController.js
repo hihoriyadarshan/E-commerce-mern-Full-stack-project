@@ -33,6 +33,7 @@ exports.createProduct = catchAsyncErrors(async(req,res,next)=>{
 
 
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
+  console.log("Request to /api/v1/products received");
   // search filter
   const resultperpage=5; //pagination
   const productCount = await Product.countDocuments();
